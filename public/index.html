@@ -769,6 +769,90 @@
       }
     }
 
+    /* ── MAILING LIST ─────────────────────────────────────── */
+    .mailing-list {
+      margin-top: 52px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mailing-list-label {
+      font-size: 13px;
+      color: var(--dim);
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .mailing-list-form {
+      display: flex;
+      gap: 0;
+      max-width: 480px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .mailing-list-form:focus-within {
+      border-color: var(--accent);
+    }
+
+    .mailing-list-form input[type="email"] {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 14px 24px;
+      font-size: 14px;
+      color: var(--text);
+      font-family: inherit;
+      letter-spacing: 0.02em;
+    }
+
+    .mailing-list-form input[type="email"]::placeholder {
+      color: var(--dim2);
+    }
+
+    .mailing-list-form button {
+      background: var(--accent);
+      border: none;
+      padding: 14px 28px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #000;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      font-family: inherit;
+      transition: background 0.2s, opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .mailing-list-form button:hover {
+      opacity: 0.85;
+    }
+
+    .mailing-list-form button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .mailing-msg {
+      margin-top: 12px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      min-height: 20px;
+      transition: opacity 0.3s;
+    }
+
+    .mailing-msg.success {
+      color: #a8ddb5;
+    }
+
+    .mailing-msg.error {
+      color: #e8a8a8;
+    }
+
     /* ── FOOTER ──────────────────────────────────────────── */
     footer {
       padding: 44px 48px;
@@ -1231,6 +1315,15 @@
         <span class="dot"></span>
         Join the inner circle — early access to collections &amp; member-only events
       </div>
+
+      <div class="mailing-list">
+        <div class="mailing-list-label">////// Stay in the loop</div>
+        <form class="mailing-list-form" id="mailingForm" onsubmit="return handleMailingSubmit(event)">
+          <input type="email" id="mailingEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" id="mailingBtn">Join Waitlist</button>
+        </form>
+        <div class="mailing-msg" id="mailingMsg"></div>
+      </div>
     </div>
   </section>
 
@@ -1261,6 +1354,55 @@
     style="text-align:center;padding:14px 48px;font-size:11px;color:rgba(255,255,255,0.55);letter-spacing:0.06em;border-top:1px solid rgba(255,255,255,0.12);">
     Built by Hallan Maxwel
   </div>
+
+  <!-- ── FIREBASE SDK ──────────────────────────────────────── -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+    import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
+
+    const firebaseConfig = {
+      projectId: 'website-58a5c'
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.handleMailingSubmit = async function (e) {
+      e.preventDefault();
+      const emailInput = document.getElementById('mailingEmail');
+      const btn = document.getElementById('mailingBtn');
+      const msg = document.getElementById('mailingMsg');
+      const email = emailInput.value.trim();
+
+      if (!email) return false;
+
+      btn.disabled = true;
+      btn.textContent = 'Joining...';
+      msg.textContent = '';
+      msg.className = 'mailing-msg';
+
+      try {
+        await addDoc(collection(db, 'mailing_list'), {
+          email: email,
+          subscribedAt: serverTimestamp()
+        });
+        msg.textContent = '✓ You\'re in! We\'ll keep you posted.';
+        msg.className = 'mailing-msg success';
+        emailInput.value = '';
+        btn.textContent = 'Joined!';
+        setTimeout(() => {
+          btn.textContent = 'Join Waitlist';
+          btn.disabled = false;
+        }, 3000);
+      } catch (err) {
+        console.error('Mailing list error:', err);
+        msg.textContent = 'Something went wrong. Please try again.';
+        msg.className = 'mailing-msg error';
+        btn.textContent = 'Join Waitlist';
+        btn.disabled = false;
+      }
+      return false;
+    };
+  </script>
 
   <!-- ── THREE.JS ───────────────────────────────────────────── -->
   <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
