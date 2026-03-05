@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cheeky — Fashion Social Network</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
-      --bg:        #080808;
-      --surface:   #0f0f0f;
-      --surface2:  #141414;
-      --border:    rgba(255,255,255,0.07);
-      --text:      #ffffff;
-      --dim:       rgba(255,255,255,0.45);
-      --dim2:      rgba(255,255,255,0.22);
-      --accent:    #e8a87c;
-      --accent-lo: rgba(232,168,124,0.12);
-      --accent-glow: rgba(232,168,124,0.35);
+      --bg: #080808;
+      --surface: #0f0f0f;
+      --surface2: #141414;
+      --border: rgba(255, 255, 255, 0.07);
+      --text: #ffffff;
+      --dim: rgba(255, 255, 255, 0.45);
+      --dim2: rgba(255, 255, 255, 0.22);
+      --accent: #e8a87c;
+      --accent-lo: rgba(232, 168, 124, 0.12);
+      --accent-glow: rgba(232, 168, 124, 0.35);
       --r: 20px;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -37,13 +48,15 @@
     /* ── NAV ─────────────────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 200;
       padding: 22px 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(to bottom, rgba(8,8,8,0.85) 60%, transparent);
+      background: linear-gradient(to bottom, rgba(8, 8, 8, 0.85) 60%, transparent);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
@@ -69,7 +82,10 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--text); }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
     .nav-cta {
       background: var(--accent);
@@ -82,7 +98,11 @@
       letter-spacing: 0.02em;
       transition: opacity 0.2s, transform 0.2s;
     }
-    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .nav-cta:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
 
     /* ── HERO ────────────────────────────────────────────── */
     #hero {
@@ -104,8 +124,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 60% at 50% 60%, transparent 0%, rgba(8,8,8,0.4) 100%),
-        linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.0) 55%);
+        radial-gradient(ellipse 60% 60% at 50% 60%, transparent 0%, rgba(8, 8, 8, 0.4) 100%),
+        linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.0) 55%);
       pointer-events: none;
     }
 
@@ -117,12 +137,14 @@
       z-index: 2;
       text-align: right;
     }
+
     .hero-manifesto-label {
       font-size: 10px;
       letter-spacing: 0.2em;
       color: var(--dim2);
       margin-bottom: 10px;
     }
+
     .hero-manifesto p {
       font-size: 12px;
       color: var(--dim);
@@ -133,7 +155,9 @@
 
     .hero-content {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       z-index: 2;
       padding: 0 48px 64px;
       display: flex;
@@ -186,7 +210,10 @@
       text-decoration: none;
       transition: opacity 0.2s;
     }
-    .btn-solid:hover { opacity: 0.85; }
+
+    .btn-solid:hover {
+      opacity: 0.85;
+    }
 
     .btn-outline {
       border: 1px solid var(--border);
@@ -198,12 +225,16 @@
       backdrop-filter: blur(10px);
       transition: border-color 0.2s;
     }
-    .btn-outline:hover { border-color: rgba(255,255,255,0.3); }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
 
     .hero-right-text {
       text-align: right;
       max-width: 200px;
     }
+
     .hero-right-text .label {
       font-size: 10px;
       letter-spacing: 0.15em;
@@ -211,6 +242,7 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
+
     .hero-right-text p {
       font-size: 13px;
       color: var(--dim);
@@ -229,28 +261,41 @@
       align-items: center;
       gap: 10px;
     }
+
     .hero-scroll span {
       font-size: 9px;
       letter-spacing: 0.2em;
       color: var(--dim2);
       text-transform: uppercase;
     }
+
     .scroll-bar {
       width: 1px;
       height: 36px;
       background: linear-gradient(to bottom, transparent, var(--accent));
       animation: scPulse 2s ease-in-out infinite;
     }
+
     @keyframes scPulse {
-      0%,100% { opacity: 0.3; }
-      50%      { opacity: 1; }
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 1;
+      }
     }
 
     /* ── SHARED SECTION STYLES ──────────────────────────── */
     .sec {
       padding: 120px 48px;
     }
-    .sec-line { border-top: 1px solid var(--border); }
+
+    .sec-line {
+      border-top: 1px solid var(--border);
+    }
 
     .label-tag {
       font-size: 10px;
@@ -267,7 +312,10 @@
       line-height: 1.08;
     }
 
-    .sec-title em { font-style: italic; color: var(--accent); }
+    .sec-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
 
     /* ── TICKER ──────────────────────────────────────────── */
     .ticker-wrap {
@@ -277,12 +325,14 @@
       padding: 18px 0;
       background: var(--surface);
     }
+
     .ticker-track {
       display: flex;
       gap: 0;
       animation: ticker 22s linear infinite;
       width: max-content;
     }
+
     .ticker-item {
       display: flex;
       align-items: center;
@@ -294,6 +344,7 @@
       color: var(--dim);
       white-space: nowrap;
     }
+
     .ticker-dot {
       width: 4px;
       height: 4px;
@@ -301,9 +352,15 @@
       background: var(--accent);
       flex-shrink: 0;
     }
+
     @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     /* ── FEATURES ───────────────────────────────────────── */
@@ -314,6 +371,7 @@
       margin-bottom: 72px;
       gap: 60px;
     }
+
     .features-desc {
       max-width: 340px;
       font-size: 15px;
@@ -336,8 +394,9 @@
       transition: border-color 0.3s, transform 0.3s;
       cursor: default;
     }
+
     .card:hover {
-      border-color: rgba(232,168,124,0.4);
+      border-color: rgba(232, 168, 124, 0.4);
       transform: translateY(-4px);
     }
 
@@ -407,12 +466,22 @@
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(232,168,124,0.18) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 168, 124, 0.18) 0%, transparent 70%);
       animation: orbPulse 4s ease-in-out infinite;
     }
+
     @keyframes orbPulse {
-      0%,100% { transform: scale(1); opacity: 0.6; }
-      50%      { transform: scale(1.15); opacity: 1; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.15);
+        opacity: 1;
+      }
     }
 
     .showcase-steps {
@@ -447,6 +516,7 @@
       font-weight: 500;
       margin-bottom: 6px;
     }
+
     .step-text p {
       font-size: 13px;
       color: var(--dim);
@@ -466,7 +536,10 @@
       padding: 64px 48px;
       border-right: 1px solid var(--border);
     }
-    .stat-block:last-child { border-right: none; }
+
+    .stat-block:last-child {
+      border-right: none;
+    }
 
     .stat-num {
       font-family: 'Playfair Display', serif;
@@ -475,6 +548,7 @@
       line-height: 1;
       margin-bottom: 12px;
     }
+
     .stat-label {
       font-size: 13px;
       color: var(--dim);
@@ -538,13 +612,16 @@
       gap: 32px;
       transition: border-color 0.3s;
     }
-    .team-card:hover { border-color: rgba(232,168,124,0.3); }
+
+    .team-card:hover {
+      border-color: rgba(232, 168, 124, 0.3);
+    }
 
     .team-avatar {
       width: 72px;
       height: 72px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-lo), rgba(232,168,124,0.25));
+      background: linear-gradient(135deg, var(--accent-lo), rgba(232, 168, 124, 0.25));
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -560,6 +637,7 @@
       font-size: 20px;
       margin-bottom: 6px;
     }
+
     .team-role {
       font-size: 12px;
       color: var(--accent);
@@ -567,6 +645,7 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
+
     .team-bio {
       font-size: 13px;
       color: var(--dim);
@@ -576,7 +655,7 @@
     /* ── DOWNLOAD CTA ────────────────────────────────────── */
     #download {
       text-align: center;
-      background: linear-gradient(to bottom, var(--bg), rgba(232,168,124,0.04));
+      background: linear-gradient(to bottom, var(--bg), rgba(232, 168, 124, 0.04));
       border-top: 1px solid var(--border);
       position: relative;
       overflow: hidden;
@@ -589,7 +668,7 @@
       transform: translateX(-50%);
       width: 600px;
       height: 400px;
-      background: radial-gradient(ellipse, rgba(232,168,124,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(232, 168, 124, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -601,6 +680,7 @@
       position: relative;
       z-index: 1;
     }
+
     .cta-sub {
       font-size: 15px;
       color: var(--dim);
@@ -630,7 +710,11 @@
       color: var(--text);
       transition: border-color 0.2s, transform 0.2s;
     }
-    .cta-store-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .cta-store-btn:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
 
     .store-icon {
       width: 28px;
@@ -645,6 +729,7 @@
       color: var(--dim);
       letter-spacing: 0.06em;
     }
+
     .store-text strong {
       font-size: 15px;
       font-weight: 500;
@@ -663,8 +748,26 @@
       position: relative;
       z-index: 1;
     }
-    .cta-inner-circle .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.5s ease-in-out infinite; }
-    @keyframes blink { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    .cta-inner-circle .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
 
     /* ── FOOTER ──────────────────────────────────────────── */
     footer {
@@ -686,6 +789,7 @@
       gap: 28px;
       list-style: none;
     }
+
     .footer-links a {
       font-size: 11px;
       color: var(--dim2);
@@ -693,7 +797,10 @@
       letter-spacing: 0.06em;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--dim); }
+
+    .footer-links a:hover {
+      color: var(--dim);
+    }
 
     .footer-right {
       text-align: right;
@@ -708,6 +815,7 @@
       gap: 16px;
       margin-bottom: 8px;
     }
+
     .social-row a {
       color: var(--dim2);
       text-decoration: none;
@@ -715,31 +823,93 @@
       letter-spacing: 0.06em;
       transition: color 0.2s;
     }
-    .social-row a:hover { color: var(--accent); }
+
+    .social-row a:hover {
+      color: var(--accent);
+    }
 
     /* ── RESPONSIVE ──────────────────────────────────────── */
     @media (max-width: 900px) {
-      nav { padding: 18px 24px; }
-      .nav-links { display: none; }
-      .sec { padding: 80px 24px; }
-      .hero-content { padding: 0 24px 56px; }
-      .hero-manifesto { display: none; }
-      .hero-right-text { display: none; }
-      .features-head { flex-direction: column; gap: 24px; }
-      .cards { grid-template-columns: 1fr; }
-      .showcase-inner { grid-template-columns: 1fr; }
-      .showcase-visual { min-height: 360px; }
-      .showcase-text { padding: 60px 24px; }
-      .stats-sec { flex-direction: column; }
-      .stat-block { border-right: none; border-bottom: 1px solid var(--border); }
-      .mission-inner { grid-template-columns: 1fr; gap: 48px; }
-      .team-grid { grid-template-columns: 1fr; }
-      footer { grid-template-columns: 1fr; gap: 28px; text-align: center; }
-      .footer-right { text-align: center; }
-      .social-row { justify-content: center; }
+      nav {
+        padding: 18px 24px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .sec {
+        padding: 80px 24px;
+      }
+
+      .hero-content {
+        padding: 0 24px 56px;
+      }
+
+      .hero-manifesto {
+        display: none;
+      }
+
+      .hero-right-text {
+        display: none;
+      }
+
+      .features-head {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-visual {
+        min-height: 360px;
+      }
+
+      .showcase-text {
+        padding: 60px 24px;
+      }
+
+      .stats-sec {
+        flex-direction: column;
+      }
+
+      .stat-block {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mission-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .footer-right {
+        text-align: center;
+      }
+
+      .social-row {
+        justify-content: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ── NAV ─────────────────────────────────────────────── -->
@@ -769,10 +939,13 @@
       <div class="hero-left">
         <div class="hero-tag">////// Fashion Social Network</div>
         <h1 class="hero-title">Your closet,<br><em>rediscovered.</em></h1>
-        <p class="hero-sub">AI-powered styling meets social commerce. Photograph anything, share everything, wear it with confidence.</p>
+        <p class="hero-sub">AI-powered styling meets social commerce. Photograph anything, share everything, wear it
+          with confidence.</p>
         <div class="hero-btns">
-          <a href="https://apps.apple.com/us/app/cheeky-fit/id6758772889" target="_blank" class="btn-solid">Get on iOS</a>
-          <a href="https://drive.google.com/file/d/17SDr71lXgJF2GLpA0mgTwcsjDjGxHaQc/view" target="_blank" class="btn-outline">Android Beta</a>
+          <a href="https://apps.apple.com/us/app/cheeky-fit/id6758772889" target="_blank" class="btn-solid">Get on
+            iOS</a>
+          <a href="https://drive.google.com/file/d/17SDr71lXgJF2GLpA0mgTwcsjDjGxHaQc/view" target="_blank"
+            class="btn-outline">Android Beta</a>
         </div>
       </div>
       <div class="hero-right-text">
@@ -817,48 +990,55 @@
         <div class="label-tag">////// Core Features</div>
         <h2 class="sec-title">Everything you need<br>to own your <em>style.</em></h2>
       </div>
-      <p class="features-desc">From a single photo to a full fashion community — Cheeky is your complete style operating system.</p>
+      <p class="features-desc">From a single photo to a full fashion community — Cheeky is your complete style operating
+        system.</p>
     </div>
 
     <div class="cards">
       <div class="card">
         <div class="card-num">01 / 03</div>
         <!-- closet icon -->
-        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="6" width="36" height="32" rx="3"/>
-          <line x1="22" y1="6" x2="22" y2="38"/>
-          <line x1="4" y1="16" x2="22" y2="16"/>
-          <line x1="22" y1="16" x2="40" y2="16"/>
-          <path d="M13 11 Q13 8 16 8 Q19 8 19 11"/>
-          <path d="M25 11 Q25 8 28 8 Q31 8 31 11"/>
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="6" width="36" height="32" rx="3" />
+          <line x1="22" y1="6" x2="22" y2="38" />
+          <line x1="4" y1="16" x2="22" y2="16" />
+          <line x1="22" y1="16" x2="40" y2="16" />
+          <path d="M13 11 Q13 8 16 8 Q19 8 19 11" />
+          <path d="M25 11 Q25 8 28 8 Q31 8 31 11" />
         </svg>
         <h3 class="card-title">The Closet</h3>
-        <p class="card-body">Photograph any garment at any angle — scrunched, folded, on a hanger. Our AI instantly cleans, catalogues, and organizes it into your living digital wardrobe.</p>
+        <p class="card-body">Photograph any garment at any angle — scrunched, folded, on a hanger. Our AI instantly
+          cleans, catalogues, and organizes it into your living digital wardrobe.</p>
       </div>
 
       <div class="card">
         <div class="card-num">02 / 03</div>
         <!-- social icon -->
-        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="22" cy="14" r="6"/>
-          <circle cx="10" cy="32" r="5"/>
-          <circle cx="34" cy="32" r="5"/>
-          <line x1="22" y1="20" x2="15" y2="27"/>
-          <line x1="22" y1="20" x2="29" y2="27"/>
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="22" cy="14" r="6" />
+          <circle cx="10" cy="32" r="5" />
+          <circle cx="34" cy="32" r="5" />
+          <line x1="22" y1="20" x2="15" y2="27" />
+          <line x1="22" y1="20" x2="29" y2="27" />
         </svg>
         <h3 class="card-title">Social Network</h3>
-        <p class="card-body">Share your outfits, follow real people, and discover how the world actually dresses. Fashion that's authentic — not curated by algorithms or paid influencers.</p>
+        <p class="card-body">Share your outfits, follow real people, and discover how the world actually dresses.
+          Fashion that's authentic — not curated by algorithms or paid influencers.</p>
       </div>
 
       <div class="card">
         <div class="card-num">03 / 03</div>
         <!-- AI/sparkle icon -->
-        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 4 L24.5 16 L36 18.5 L24.5 21 L22 33 L19.5 21 L8 18.5 L19.5 16 Z"/>
-          <path d="M34 6 L35 10 L39 11 L35 12 L34 16 L33 12 L29 11 L33 10 Z" opacity="0.6"/>
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 4 L24.5 16 L36 18.5 L24.5 21 L22 33 L19.5 21 L8 18.5 L19.5 16 Z" />
+          <path d="M34 6 L35 10 L39 11 L35 12 L34 16 L33 12 L29 11 L33 10 Z" opacity="0.6" />
         </svg>
         <h3 class="card-title">AI Styling</h3>
-        <p class="card-body">Personalized outfit recommendations from your actual wardrobe — informed by your colors, patterns, and gaps. Plus retailer picks that fit who you are, not who they want you to be.</p>
+        <p class="card-body">Personalized outfit recommendations from your actual wardrobe — informed by your colors,
+          patterns, and gaps. Plus retailer picks that fit who you are, not who they want you to be.</p>
       </div>
     </div>
   </section>
@@ -882,21 +1062,24 @@
             <div class="step-num-badge">2</div>
             <div class="step-text">
               <h4>AI builds your closet</h4>
-              <p>Our model cleans up the image, tags the garment, and slots it into your living digital wardrobe automatically.</p>
+              <p>Our model cleans up the image, tags the garment, and slots it into your living digital wardrobe
+                automatically.</p>
             </div>
           </div>
           <div class="showcase-step">
             <div class="step-num-badge">3</div>
             <div class="step-text">
               <h4>Get styled & share</h4>
-              <p>Receive daily outfit combinations, discover what to buy next, and share your looks with the community.</p>
+              <p>Receive daily outfit combinations, discover what to buy next, and share your looks with the community.
+              </p>
             </div>
           </div>
           <div class="showcase-step">
             <div class="step-num-badge">4</div>
             <div class="step-text">
               <h4>Shop with precision</h4>
-              <p>Retailers recommend pieces that fill real gaps in your wardrobe — not just trending inventory they want to shift.</p>
+              <p>Retailers recommend pieces that fill real gaps in your wardrobe — not just trending inventory they want
+                to shift.</p>
             </div>
           </div>
         </div>
@@ -936,8 +1119,11 @@
         <div class="label-tag">////// Our Mission</div>
         <p class="mission-quote">"A closet full of clothes — and somehow nothing to wear."</p>
         <p class="mission-body">
-          We're Cheeky-Fit Inc., a Delaware C-Corp building the social network and marketplace where people share their clothing choices with the world and retailers recommend their offering directly to consumers — powered by AI.<br><br>
-          We're not building another shopping app or another social feed. We're creating a new category: where identity, trust, and commerce meet. Fashion is social by nature. Cheeky makes it shoppable.
+          We're Cheeky-Fit Inc., a Delaware C-Corp building the social network and marketplace where people share their
+          clothing choices with the world and retailers recommend their offering directly to consumers — powered by
+          AI.<br><br>
+          We're not building another shopping app or another social feed. We're creating a new category: where identity,
+          trust, and commerce meet. Fashion is social by nature. Cheeky makes it shoppable.
         </p>
         <div class="mission-pills">
           <span class="pill">Social Commerce</span>
@@ -952,15 +1138,18 @@
         <div style="display:flex;flex-direction:column;gap:20px;">
           <div class="card" style="padding:28px;">
             <div class="card-title" style="font-size:16px;margin-bottom:8px;">Transaction Fees</div>
-            <p class="card-body">Revenue generated when users purchase retailer recommendations — not from selling your attention to advertisers.</p>
+            <p class="card-body">Revenue generated when users purchase retailer recommendations — not from selling your
+              attention to advertisers.</p>
           </div>
           <div class="card" style="padding:28px;">
             <div class="card-title" style="font-size:16px;margin-bottom:8px;">Promoted Placements</div>
-            <p class="card-body">Retailers pay for precision placement in front of users who actually match their product — powered by real wardrobe data.</p>
+            <p class="card-body">Retailers pay for precision placement in front of users who actually match their
+              product — powered by real wardrobe data.</p>
           </div>
           <div class="card" style="padding:28px;">
             <div class="card-title" style="font-size:16px;margin-bottom:8px;">Demand Insights</div>
-            <p class="card-body">Aggregated, anonymized wardrobe trends that help brands reduce overproduction and plan inventory with precision.</p>
+            <p class="card-body">Aggregated, anonymized wardrobe trends that help brands reduce overproduction and plan
+              inventory with precision.</p>
           </div>
         </div>
       </div>
@@ -978,7 +1167,9 @@
         <div>
           <div class="team-name">Mia Baden</div>
           <div class="team-role">Technical Co-Founder</div>
-          <p class="team-bio">Leads all engineering and AI at Cheeky — mobile ML, on-device computer vision, and edge-cloud systems. Previously built mission-critical software for U.S. Army and Navy programs. She owns the full stack: data pipelines, ML models, mobile deployment, and product integration.</p>
+          <p class="team-bio">Leads all engineering and AI at Cheeky — mobile ML, on-device computer vision, and
+            edge-cloud systems. Previously built mission-critical software for U.S. Army and Navy programs. She owns the
+            full stack: data pipelines, ML models, mobile deployment, and product integration.</p>
         </div>
       </div>
       <div class="team-card">
@@ -986,30 +1177,37 @@
         <div>
           <div class="team-name">Jaideep Pande</div>
           <div class="team-role">Co-Founder, Business & Strategy</div>
-          <p class="team-bio">Handles fundraising, partnerships, go-to-market, and investor relations. Background in economics, finance, and investment analysis. Focused on market positioning, unit economics, and building Cheeky as a sustainable company — not just a product.</p>
+          <p class="team-bio">Handles fundraising, partnerships, go-to-market, and investor relations. Background in
+            economics, finance, and investment analysis. Focused on market positioning, unit economics, and building
+            Cheeky as a sustainable company — not just a product.</p>
         </div>
       </div>
     </div>
 
-    <div style="margin-top:48px; padding:36px 40px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
+    <div
+      style="margin-top:48px; padding:36px 40px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
       <div>
         <div class="label-tag" style="margin-bottom:8px;">////// Feedback</div>
-        <p style="font-size:14px;color:var(--dim);line-height:1.6;">We're in early access and actively shaping the product.<br>Tell us what to fix, what to add, what to change.</p>
+        <p style="font-size:14px;color:var(--dim);line-height:1.6;">We're in early access and actively shaping the
+          product.<br>Tell us what to fix, what to add, what to change.</p>
       </div>
-      <a href="https://cheeky.fit/feedback" target="_blank" class="btn-outline" style="white-space:nowrap;">Tell us what to fix →</a>
+      <a href="https://cheeky.fit/feedback" target="_blank" class="btn-outline" style="white-space:nowrap;">Tell us what
+        to fix →</a>
     </div>
   </section>
 
   <!-- ── DOWNLOAD CTA ───────────────────────────────────────── -->
   <section id="download" class="sec">
     <div class="cta-glow"></div>
-    <div class="cta-title">Your wardrobe<br>is waiting for <em style="font-style:italic;color:var(--accent);">you.</em></div>
+    <div class="cta-title">Your wardrobe<br>is waiting for <em style="font-style:italic;color:var(--accent);">you.</em>
+    </div>
     <p class="cta-sub">Download the app. Start with one photo. Let Cheeky do the rest.</p>
 
     <div class="cta-btns">
       <a href="https://apps.apple.com/us/app/cheeky-fit/id6758772889" target="_blank" class="cta-store-btn">
         <svg class="store-icon" viewBox="0 0 28 28" fill="currentColor">
-          <path d="M20.5 14.8c-.02-3.18 2.6-4.73 2.72-4.8-1.48-2.17-3.79-2.46-4.61-2.5-1.97-.2-3.84 1.17-4.84 1.17-1 0-2.55-1.14-4.2-1.11-2.16.03-4.15 1.27-5.26 3.2-2.24 3.9-.58 9.68 1.61 12.84 1.07 1.55 2.33 3.28 4 3.22 1.61-.06 2.22-1.04 4.17-1.04 1.94 0 2.49 1.04 4.18 1 1.73-.03 2.82-1.57 3.88-3.13 1.22-1.78 1.72-3.52 1.75-3.61-.04-.02-3.37-1.3-3.4-5.25zM17.2 5.6c.89-1.09 1.49-2.59 1.32-4.1-1.28.05-2.82.86-3.73 1.94-.82.95-1.54 2.48-1.35 3.93 1.43.11 2.88-.73 3.76-1.77z"/>
+          <path
+            d="M20.5 14.8c-.02-3.18 2.6-4.73 2.72-4.8-1.48-2.17-3.79-2.46-4.61-2.5-1.97-.2-3.84 1.17-4.84 1.17-1 0-2.55-1.14-4.2-1.11-2.16.03-4.15 1.27-5.26 3.2-2.24 3.9-.58 9.68 1.61 12.84 1.07 1.55 2.33 3.28 4 3.22 1.61-.06 2.22-1.04 4.17-1.04 1.94 0 2.49 1.04 4.18 1 1.73-.03 2.82-1.57 3.88-3.13 1.22-1.78 1.72-3.52 1.75-3.61-.04-.02-3.37-1.3-3.4-5.25zM17.2 5.6c.89-1.09 1.49-2.59 1.32-4.1-1.28.05-2.82.86-3.73 1.94-.82.95-1.54 2.48-1.35 3.93 1.43.11 2.88-.73 3.76-1.77z" />
         </svg>
         <div class="store-text">
           <small>Download on the</small>
@@ -1018,7 +1216,8 @@
       </a>
       <a href="#" class="cta-store-btn">
         <svg class="store-icon" viewBox="0 0 28 28" fill="currentColor">
-          <path d="M3.6 2.4L15.8 14 3.6 25.6a2 2 0 01-.6-1.4V3.8c0-.55.22-1.06.6-1.4zM17.4 15.6l3.3 3.3-12.4 7.1 9.1-10.4zM24.4 12.2c.6.36 1 .98 1 1.8s-.4 1.44-1 1.8l-2.6 1.5-3.6-3.3 3.6-3.3 2.6 1.5zM8.3 3.1l12.4 7.1-3.3 3.3-9.1-10.4z"/>
+          <path
+            d="M3.6 2.4L15.8 14 3.6 25.6a2 2 0 01-.6-1.4V3.8c0-.55.22-1.06.6-1.4zM17.4 15.6l3.3 3.3-12.4 7.1 9.1-10.4zM24.4 12.2c.6.36 1 .98 1 1.8s-.4 1.44-1 1.8l-2.6 1.5-3.6-3.3 3.6-3.3 2.6 1.5zM8.3 3.1l12.4 7.1-3.3 3.3-9.1-10.4z" />
         </svg>
         <div class="store-text">
           <small>Get it on</small>
@@ -1058,337 +1257,339 @@
     </div>
   </footer>
 
-  <div style="text-align:center;padding:14px 48px;font-size:11px;color:rgba(255,255,255,0.18);letter-spacing:0.06em;border-top:1px solid rgba(255,255,255,0.07);">
+  <div
+    style="text-align:center;padding:14px 48px;font-size:11px;color:rgba(255,255,255,0.55);letter-spacing:0.06em;border-top:1px solid rgba(255,255,255,0.12);">
     Built by Hallan Maxwel
   </div>
 
   <!-- ── THREE.JS ───────────────────────────────────────────── -->
   <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
   <script>
-  (function () {
+    (function () {
 
-    /* ── helpers ── */
-    function woodMat(hex, rough) {
-      return new THREE.MeshPhysicalMaterial({ color: hex, roughness: rough || 0.92, metalness: 0.02 });
-    }
+      /* ── helpers ── */
+      function woodMat(hex, rough) {
+        return new THREE.MeshPhysicalMaterial({ color: hex, roughness: rough || 0.92, metalness: 0.02 });
+      }
 
-    /* ══════════════════════════════════════════════════════════
-       HERO CANVAS — full-screen 3D wardrobe
-    ══════════════════════════════════════════════════════════ */
-    const heroCanvas = document.getElementById('hero-canvas');
-    const hR = new THREE.WebGLRenderer({ canvas: heroCanvas, antialias: true, alpha: false });
-    hR.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    hR.setSize(window.innerWidth, window.innerHeight);
-    hR.shadowMap.enabled = true;
-    hR.shadowMap.type = THREE.PCFSoftShadowMap;
-    hR.toneMapping = THREE.ACESFilmicToneMapping;
-    hR.toneMappingExposure = 1.1;
+      /* ══════════════════════════════════════════════════════════
+         HERO CANVAS — full-screen 3D wardrobe
+      ══════════════════════════════════════════════════════════ */
+      const heroCanvas = document.getElementById('hero-canvas');
+      const hR = new THREE.WebGLRenderer({ canvas: heroCanvas, antialias: true, alpha: false });
+      hR.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      hR.setSize(window.innerWidth, window.innerHeight);
+      hR.shadowMap.enabled = true;
+      hR.shadowMap.type = THREE.PCFSoftShadowMap;
+      hR.toneMapping = THREE.ACESFilmicToneMapping;
+      hR.toneMappingExposure = 1.1;
 
-    const hS = new THREE.Scene();
-    hS.background = new THREE.Color(0x080808);
-    hS.fog = new THREE.FogExp2(0x080808, 0.055);
+      const hS = new THREE.Scene();
+      hS.background = new THREE.Color(0x080808);
+      hS.fog = new THREE.FogExp2(0x080808, 0.055);
 
-    const hC = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.1, 80);
-    hC.position.set(0, 2, 9);
-    hC.lookAt(0, 2, 0);
-
-    /* wardrobe */
-    const W = 3.2, H = 4.8, D = 1.4, TH = 0.09;
-    const body = new THREE.Group();
-
-    const panelMat  = woodMat(0x120900);
-    const sideMat   = woodMat(0x1a0d05);
-    const innerMat  = new THREE.MeshPhysicalMaterial({ color: 0x0d0805, roughness: 0.98 });
-
-    function box(w, h, d, mat, x, y, z, parent) {
-      const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
-      m.position.set(x, y, z);
-      m.castShadow = m.receiveShadow = true;
-      parent.add(m);
-      return m;
-    }
-
-    /* shell */
-    box(W,    TH, D,    panelMat, 0,    H/2 - TH/2, 0, body);  // top
-    box(W,    TH, D,    panelMat, 0,   -H/2 + TH/2, 0, body);  // bottom
-    box(TH,   H,  D,    sideMat, -W/2 + TH/2, 0, 0, body);     // left
-    box(TH,   H,  D,    sideMat,  W/2 - TH/2, 0, 0, body);     // right
-    box(W,    H,  TH,   innerMat, 0, 0, -D/2 + TH/2, body);    // back
-
-    /* middle shelf */
-    box(W - TH*2, TH, D - TH, panelMat, 0, 0.4, 0, body);
-
-    /* hanging rod */
-    const rodMat = new THREE.MeshPhysicalMaterial({ color: 0xaaaaaa, metalness: 0.88, roughness: 0.15 });
-    const rod = new THREE.Mesh(new THREE.CylinderGeometry(0.022, 0.022, W - TH * 4, 20), rodMat);
-    rod.rotation.z = Math.PI / 2;
-    rod.position.set(0, 1.7, 0);
-    body.add(rod);
-
-    /* clothes */
-    const palette = [0xe8c4a0, 0xd4b0e0, 0xa8c8e8, 0xe8a8a8, 0xa8ddb5, 0xf0e0c0, 0xe0cdb0];
-    const clothCount = 7;
-    for (let i = 0; i < clothCount; i++) {
-      const t = (i / (clothCount - 1) - 0.5) * (W - TH * 4) * 0.88;
-      const cMat = new THREE.MeshPhysicalMaterial({
-        color: palette[i % palette.length],
-        roughness: 0.88,
-        side: THREE.DoubleSide
-      });
-
-      /* hanger arch */
-      const arch = new THREE.Mesh(
-        new THREE.TorusGeometry(0.13, 0.016, 8, 24, Math.PI),
-        rodMat
-      );
-      arch.rotation.z = Math.PI;
-      arch.position.set(t, 1.7, 0.04);
-      body.add(arch);
-
-      /* hook stem */
-      const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 0.18, 8), rodMat);
-      stem.position.set(t, 1.83, 0.04);
-      body.add(stem);
-
-      /* garment */
-      const gW = 0.34 + (i % 3) * 0.05;
-      const gH = 0.65 + (i % 2) * 0.15;
-      const gMesh = new THREE.Mesh(new THREE.BoxGeometry(gW, gH, 0.03), cMat);
-      gMesh.position.set(t, 1.7 - gH / 2 - 0.13, 0.04);
-      body.add(gMesh);
-    }
-
-    /* folded items on shelf */
-    const foldPalette = [0xc8d8e8, 0xe8d0b0, 0xd0c8e0];
-    for (let i = 0; i < 3; i++) {
-      const fMat = new THREE.MeshPhysicalMaterial({ color: foldPalette[i], roughness: 0.9 });
-      const fx = -0.8 + i * 0.8;
-      box(0.45, 0.18, 0.36, fMat, fx, 0.4 + TH/2 + 0.09, 0, body);
-    }
-
-    /* doors */
-    function makeDoor(side) {
-      const doorW = W / 2 - TH * 0.5;
-      const doorMesh = new THREE.Mesh(
-        new THREE.BoxGeometry(doorW, H - TH * 2, TH * 1.2),
-        sideMat
-      );
-      /* pivot group — hinge at inner edge */
-      const pivot = new THREE.Group();
-      pivot.position.set(side * (W / 2 - TH), 0, D / 2);
-      doorMesh.position.set(side * doorW / 2, 0, 0);
-      pivot.add(doorMesh);
-      /* door handle */
-      const handleMat = new THREE.MeshPhysicalMaterial({ color: 0x888888, metalness: 0.85, roughness: 0.2 });
-      const handle = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.14, 12), handleMat);
-      handle.rotation.x = Math.PI / 2;
-      handle.position.set(-side * (doorW * 0.85), 0, TH);
-      pivot.add(handle);
-      pivot.rotation.y = side * Math.PI * 0.55;
-      body.add(pivot);
-      return pivot;
-    }
-    const leftDoor  = makeDoor(-1);
-    const rightDoor = makeDoor(1);
-
-    body.position.y = H / 2 - 0.8;
-    hS.add(body);
-
-    /* interior warm light */
-    const glow = new THREE.PointLight(0xff9955, 4.5, 3.5);
-    glow.position.set(0, 1.5, 0);
-    body.add(glow);
-
-    /* top accent light inside */
-    const topGlow = new THREE.PointLight(0xffcc88, 1.5, 2);
-    topGlow.position.set(0, H / 2 - 0.3, 0);
-    body.add(topGlow);
-
-    /* world lights */
-    hS.add(new THREE.AmbientLight(0x0a0a12, 1));
-
-    const rimLight = new THREE.DirectionalLight(0x6688cc, 0.25);
-    rimLight.position.set(-4, 6, -5);
-    hS.add(rimLight);
-
-    const fillLight = new THREE.PointLight(0xff9955, 0.4, 22);
-    fillLight.position.set(-5, 4, 5);
-    hS.add(fillLight);
-
-    /* reflective floor */
-    const floorMat = new THREE.MeshPhysicalMaterial({
-      color: 0x060606, roughness: 0.05, metalness: 0.7, reflectivity: 0.6
-    });
-    const floor = new THREE.Mesh(new THREE.PlaneGeometry(30, 30), floorMat);
-    floor.rotation.x = -Math.PI / 2;
-    floor.position.y = -0.8;
-    floor.receiveShadow = true;
-    hS.add(floor);
-
-    /* dust particles */
-    const PN = 280;
-    const pPos = new Float32Array(PN * 3);
-    const pVel = new Float32Array(PN);
-    for (let i = 0; i < PN; i++) {
-      pPos[i*3]   = (Math.random() - 0.5) * 14;
-      pPos[i*3+1] = Math.random() * 7 - 0.8;
-      pPos[i*3+2] = (Math.random() - 0.5) * 10;
-      pVel[i]     = 0.001 + Math.random() * 0.002;
-    }
-    const pGeo = new THREE.BufferGeometry();
-    pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-    const pMat = new THREE.PointsMaterial({ size: 0.022, color: 0xe8c4a0, transparent: true, opacity: 0.35 });
-    hS.add(new THREE.Points(pGeo, pMat));
-
-    /* subtle mouse parallax */
-    let mx = 0, my = 0;
-    window.addEventListener('mousemove', e => {
-      mx = (e.clientX / window.innerWidth  - 0.5) * 2;
-      my = (e.clientY / window.innerHeight - 0.5) * 2;
-    });
-
-    /* animate */
-    let t = 0;
-    function heroAnimate() {
-      requestAnimationFrame(heroAnimate);
-      t += 0.008;
-
-      /* gentle body sway */
-      body.rotation.y = Math.sin(t * 0.35) * 0.12 + mx * 0.05;
-
-      /* camera micro-drift */
-      hC.position.x = mx * 0.3;
-      hC.position.y = 2 - my * 0.2;
+      const hC = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.1, 80);
+      hC.position.set(0, 2, 9);
       hC.lookAt(0, 2, 0);
 
-      /* breathing glow */
-      glow.intensity = 4.0 + Math.sin(t * 1.4) * 0.7;
+      /* wardrobe */
+      const W = 3.2, H = 4.8, D = 1.4, TH = 0.09;
+      const body = new THREE.Group();
 
-      /* doors breathe slightly */
-      leftDoor.rotation.y  = -Math.PI * 0.55 - Math.sin(t * 0.5) * 0.04;
-      rightDoor.rotation.y =  Math.PI * 0.55 + Math.sin(t * 0.5) * 0.04;
+      const panelMat = woodMat(0x120900);
+      const sideMat = woodMat(0x1a0d05);
+      const innerMat = new THREE.MeshPhysicalMaterial({ color: 0x0d0805, roughness: 0.98 });
 
-      /* particles float */
-      for (let i = 0; i < PN; i++) {
-        pPos[i*3+1] += pVel[i];
-        if (pPos[i*3+1] > 6.2) pPos[i*3+1] = -0.8;
+      function box(w, h, d, mat, x, y, z, parent) {
+        const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+        m.position.set(x, y, z);
+        m.castShadow = m.receiveShadow = true;
+        parent.add(m);
+        return m;
       }
-      pGeo.attributes.position.needsUpdate = true;
 
-      hR.render(hS, hC);
-    }
-    heroAnimate();
+      /* shell */
+      box(W, TH, D, panelMat, 0, H / 2 - TH / 2, 0, body);  // top
+      box(W, TH, D, panelMat, 0, -H / 2 + TH / 2, 0, body);  // bottom
+      box(TH, H, D, sideMat, -W / 2 + TH / 2, 0, 0, body);     // left
+      box(TH, H, D, sideMat, W / 2 - TH / 2, 0, 0, body);     // right
+      box(W, H, TH, innerMat, 0, 0, -D / 2 + TH / 2, body);    // back
 
-    /* resize */
-    window.addEventListener('resize', () => {
-      hC.aspect = window.innerWidth / window.innerHeight;
-      hC.updateProjectionMatrix();
-      hR.setSize(window.innerWidth, window.innerHeight);
-    });
+      /* middle shelf */
+      box(W - TH * 2, TH, D - TH, panelMat, 0, 0.4, 0, body);
+
+      /* hanging rod */
+      const rodMat = new THREE.MeshPhysicalMaterial({ color: 0xaaaaaa, metalness: 0.88, roughness: 0.15 });
+      const rod = new THREE.Mesh(new THREE.CylinderGeometry(0.022, 0.022, W - TH * 4, 20), rodMat);
+      rod.rotation.z = Math.PI / 2;
+      rod.position.set(0, 1.7, 0);
+      body.add(rod);
+
+      /* clothes */
+      const palette = [0xe8c4a0, 0xd4b0e0, 0xa8c8e8, 0xe8a8a8, 0xa8ddb5, 0xf0e0c0, 0xe0cdb0];
+      const clothCount = 7;
+      for (let i = 0; i < clothCount; i++) {
+        const t = (i / (clothCount - 1) - 0.5) * (W - TH * 4) * 0.88;
+        const cMat = new THREE.MeshPhysicalMaterial({
+          color: palette[i % palette.length],
+          roughness: 0.88,
+          side: THREE.DoubleSide
+        });
+
+        /* hanger arch */
+        const arch = new THREE.Mesh(
+          new THREE.TorusGeometry(0.13, 0.016, 8, 24, Math.PI),
+          rodMat
+        );
+        arch.rotation.z = Math.PI;
+        arch.position.set(t, 1.7, 0.04);
+        body.add(arch);
+
+        /* hook stem */
+        const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 0.18, 8), rodMat);
+        stem.position.set(t, 1.83, 0.04);
+        body.add(stem);
+
+        /* garment */
+        const gW = 0.34 + (i % 3) * 0.05;
+        const gH = 0.65 + (i % 2) * 0.15;
+        const gMesh = new THREE.Mesh(new THREE.BoxGeometry(gW, gH, 0.03), cMat);
+        gMesh.position.set(t, 1.7 - gH / 2 - 0.13, 0.04);
+        body.add(gMesh);
+      }
+
+      /* folded items on shelf */
+      const foldPalette = [0xc8d8e8, 0xe8d0b0, 0xd0c8e0];
+      for (let i = 0; i < 3; i++) {
+        const fMat = new THREE.MeshPhysicalMaterial({ color: foldPalette[i], roughness: 0.9 });
+        const fx = -0.8 + i * 0.8;
+        box(0.45, 0.18, 0.36, fMat, fx, 0.4 + TH / 2 + 0.09, 0, body);
+      }
+
+      /* doors */
+      function makeDoor(side) {
+        const doorW = W / 2 - TH * 0.5;
+        const doorMesh = new THREE.Mesh(
+          new THREE.BoxGeometry(doorW, H - TH * 2, TH * 1.2),
+          sideMat
+        );
+        /* pivot group — hinge at inner edge */
+        const pivot = new THREE.Group();
+        pivot.position.set(side * (W / 2 - TH), 0, D / 2);
+        doorMesh.position.set(side * doorW / 2, 0, 0);
+        pivot.add(doorMesh);
+        /* door handle */
+        const handleMat = new THREE.MeshPhysicalMaterial({ color: 0x888888, metalness: 0.85, roughness: 0.2 });
+        const handle = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.14, 12), handleMat);
+        handle.rotation.x = Math.PI / 2;
+        handle.position.set(-side * (doorW * 0.85), 0, TH);
+        pivot.add(handle);
+        pivot.rotation.y = side * Math.PI * 0.55;
+        body.add(pivot);
+        return pivot;
+      }
+      const leftDoor = makeDoor(-1);
+      const rightDoor = makeDoor(1);
+
+      body.position.y = H / 2 - 0.8;
+      hS.add(body);
+
+      /* interior warm light */
+      const glow = new THREE.PointLight(0xff9955, 4.5, 3.5);
+      glow.position.set(0, 1.5, 0);
+      body.add(glow);
+
+      /* top accent light inside */
+      const topGlow = new THREE.PointLight(0xffcc88, 1.5, 2);
+      topGlow.position.set(0, H / 2 - 0.3, 0);
+      body.add(topGlow);
+
+      /* world lights */
+      hS.add(new THREE.AmbientLight(0x0a0a12, 1));
+
+      const rimLight = new THREE.DirectionalLight(0x6688cc, 0.25);
+      rimLight.position.set(-4, 6, -5);
+      hS.add(rimLight);
+
+      const fillLight = new THREE.PointLight(0xff9955, 0.4, 22);
+      fillLight.position.set(-5, 4, 5);
+      hS.add(fillLight);
+
+      /* reflective floor */
+      const floorMat = new THREE.MeshPhysicalMaterial({
+        color: 0x060606, roughness: 0.05, metalness: 0.7, reflectivity: 0.6
+      });
+      const floor = new THREE.Mesh(new THREE.PlaneGeometry(30, 30), floorMat);
+      floor.rotation.x = -Math.PI / 2;
+      floor.position.y = -0.8;
+      floor.receiveShadow = true;
+      hS.add(floor);
+
+      /* dust particles */
+      const PN = 280;
+      const pPos = new Float32Array(PN * 3);
+      const pVel = new Float32Array(PN);
+      for (let i = 0; i < PN; i++) {
+        pPos[i * 3] = (Math.random() - 0.5) * 14;
+        pPos[i * 3 + 1] = Math.random() * 7 - 0.8;
+        pPos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+        pVel[i] = 0.001 + Math.random() * 0.002;
+      }
+      const pGeo = new THREE.BufferGeometry();
+      pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+      const pMat = new THREE.PointsMaterial({ size: 0.022, color: 0xe8c4a0, transparent: true, opacity: 0.35 });
+      hS.add(new THREE.Points(pGeo, pMat));
+
+      /* subtle mouse parallax */
+      let mx = 0, my = 0;
+      window.addEventListener('mousemove', e => {
+        mx = (e.clientX / window.innerWidth - 0.5) * 2;
+        my = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+
+      /* animate */
+      let t = 0;
+      function heroAnimate() {
+        requestAnimationFrame(heroAnimate);
+        t += 0.008;
+
+        /* gentle body sway */
+        body.rotation.y = Math.sin(t * 0.35) * 0.12 + mx * 0.05;
+
+        /* camera micro-drift */
+        hC.position.x = mx * 0.3;
+        hC.position.y = 2 - my * 0.2;
+        hC.lookAt(0, 2, 0);
+
+        /* breathing glow */
+        glow.intensity = 4.0 + Math.sin(t * 1.4) * 0.7;
+
+        /* doors breathe slightly */
+        leftDoor.rotation.y = -Math.PI * 0.55 - Math.sin(t * 0.5) * 0.04;
+        rightDoor.rotation.y = Math.PI * 0.55 + Math.sin(t * 0.5) * 0.04;
+
+        /* particles float */
+        for (let i = 0; i < PN; i++) {
+          pPos[i * 3 + 1] += pVel[i];
+          if (pPos[i * 3 + 1] > 6.2) pPos[i * 3 + 1] = -0.8;
+        }
+        pGeo.attributes.position.needsUpdate = true;
+
+        hR.render(hS, hC);
+      }
+      heroAnimate();
+
+      /* resize */
+      window.addEventListener('resize', () => {
+        hC.aspect = window.innerWidth / window.innerHeight;
+        hC.updateProjectionMatrix();
+        hR.setSize(window.innerWidth, window.innerHeight);
+      });
 
 
-    /* ══════════════════════════════════════════════════════════
-       MINI CANVAS — showcase panel (clothes rail close-up)
-    ══════════════════════════════════════════════════════════ */
-    const miniCanvas = document.getElementById('mini-canvas');
-    const section = miniCanvas.parentElement;
+      /* ══════════════════════════════════════════════════════════
+         MINI CANVAS — showcase panel (clothes rail close-up)
+      ══════════════════════════════════════════════════════════ */
+      const miniCanvas = document.getElementById('mini-canvas');
+      const section = miniCanvas.parentElement;
 
-    function setMiniSize() {
-      miniCanvas.width  = section.clientWidth;
-      miniCanvas.height = section.clientHeight;
-    }
-    setMiniSize();
+      function setMiniSize() {
+        miniCanvas.width = section.clientWidth;
+        miniCanvas.height = section.clientHeight;
+      }
+      setMiniSize();
 
-    const mR = new THREE.WebGLRenderer({ canvas: miniCanvas, antialias: true, alpha: true });
-    mR.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    mR.setSize(section.clientWidth, section.clientHeight);
-    mR.toneMapping = THREE.ACESFilmicToneMapping;
-    mR.toneMappingExposure = 1.2;
-
-    const mS = new THREE.Scene();
-    mS.fog = new THREE.FogExp2(0x0d0a08, 0.18);
-
-    const mC = new THREE.PerspectiveCamera(45, section.clientWidth / section.clientHeight, 0.1, 30);
-    mC.position.set(0, 0.3, 4.5);
-    mC.lookAt(0, 0.3, 0);
-
-    /* hanging rail */
-    const railMat = new THREE.MeshPhysicalMaterial({ color: 0xbbbbbb, metalness: 0.92, roughness: 0.12 });
-    const rail = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 5, 16), railMat);
-    rail.rotation.z = Math.PI / 2;
-    rail.position.y = 1.5;
-    mS.add(rail);
-
-    /* rail end caps */
-    [-2.5, 2.5].forEach(x => {
-      const cap = new THREE.Mesh(new THREE.SphereGeometry(0.04, 12, 12), railMat);
-      cap.position.set(x, 1.5, 0);
-      mS.add(cap);
-    });
-
-    /* hanging garments — slightly more detailed */
-    const mPalette = [0xf0dbc0, 0xc8b8e0, 0xb0ccdc, 0xdcb0b0, 0xb0d8b8, 0xddd0b8, 0xe8cce0, 0xc8d4b4];
-    const gCount = 8;
-    for (let i = 0; i < gCount; i++) {
-      const xPos = (i / (gCount - 1) - 0.5) * 4.4;
-      const cM = new THREE.MeshPhysicalMaterial({ color: mPalette[i], roughness: 0.85, side: THREE.DoubleSide });
-
-      /* hanger */
-      const arch2 = new THREE.Mesh(new THREE.TorusGeometry(0.11, 0.013, 8, 20, Math.PI), railMat);
-      arch2.rotation.z = Math.PI;
-      arch2.position.set(xPos, 1.5, 0);
-      mS.add(arch2);
-
-      const stem2 = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, 0.15, 8), railMat);
-      stem2.position.set(xPos, 1.61, 0);
-      mS.add(stem2);
-
-      /* cloth shape — trapezoid via lathe or just box with slight taper */
-      const gw = 0.3 + (i % 3) * 0.06;
-      const gh = 0.55 + (i % 2) * 0.18;
-      const gMesh2 = new THREE.Mesh(new THREE.BoxGeometry(gw, gh, 0.025 + Math.random() * 0.01), cM);
-      gMesh2.position.set(xPos, 1.5 - gh / 2 - 0.11, 0);
-      mS.add(gMesh2);
-    }
-
-    /* floor */
-    const mFloor = new THREE.Mesh(
-      new THREE.PlaneGeometry(14, 14),
-      new THREE.MeshPhysicalMaterial({ color: 0x080706, roughness: 0.08, metalness: 0.6 })
-    );
-    mFloor.rotation.x = -Math.PI / 2;
-    mFloor.position.y = -1.1;
-    mS.add(mFloor);
-
-    /* lights */
-    mS.add(new THREE.AmbientLight(0x0a0806, 1));
-    const mGlow = new THREE.PointLight(0xff9944, 3.5, 5);
-    mGlow.position.set(0, 2.5, 1);
-    mS.add(mGlow);
-    const mRim = new THREE.DirectionalLight(0x7799cc, 0.2);
-    mRim.position.set(-3, 4, -3);
-    mS.add(mRim);
-
-    let mt = 0;
-    function miniAnimate() {
-      requestAnimationFrame(miniAnimate);
-      mt += 0.008;
-      mGlow.intensity = 3.2 + Math.sin(mt * 1.2) * 0.5;
-      /* gentle camera sway */
-      mC.position.x = Math.sin(mt * 0.3) * 0.4;
-      mC.lookAt(0, 0.3, 0);
-      mR.render(mS, mC);
-    }
-    miniAnimate();
-
-    const resizeObs = new ResizeObserver(() => {
-      mC.aspect = section.clientWidth / section.clientHeight;
-      mC.updateProjectionMatrix();
+      const mR = new THREE.WebGLRenderer({ canvas: miniCanvas, antialias: true, alpha: true });
+      mR.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       mR.setSize(section.clientWidth, section.clientHeight);
-    });
-    resizeObs.observe(section);
+      mR.toneMapping = THREE.ACESFilmicToneMapping;
+      mR.toneMappingExposure = 1.2;
 
-  })();
+      const mS = new THREE.Scene();
+      mS.fog = new THREE.FogExp2(0x0d0a08, 0.18);
+
+      const mC = new THREE.PerspectiveCamera(45, section.clientWidth / section.clientHeight, 0.1, 30);
+      mC.position.set(0, 0.3, 4.5);
+      mC.lookAt(0, 0.3, 0);
+
+      /* hanging rail */
+      const railMat = new THREE.MeshPhysicalMaterial({ color: 0xbbbbbb, metalness: 0.92, roughness: 0.12 });
+      const rail = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 5, 16), railMat);
+      rail.rotation.z = Math.PI / 2;
+      rail.position.y = 1.5;
+      mS.add(rail);
+
+      /* rail end caps */
+      [-2.5, 2.5].forEach(x => {
+        const cap = new THREE.Mesh(new THREE.SphereGeometry(0.04, 12, 12), railMat);
+        cap.position.set(x, 1.5, 0);
+        mS.add(cap);
+      });
+
+      /* hanging garments — slightly more detailed */
+      const mPalette = [0xf0dbc0, 0xc8b8e0, 0xb0ccdc, 0xdcb0b0, 0xb0d8b8, 0xddd0b8, 0xe8cce0, 0xc8d4b4];
+      const gCount = 8;
+      for (let i = 0; i < gCount; i++) {
+        const xPos = (i / (gCount - 1) - 0.5) * 4.4;
+        const cM = new THREE.MeshPhysicalMaterial({ color: mPalette[i], roughness: 0.85, side: THREE.DoubleSide });
+
+        /* hanger */
+        const arch2 = new THREE.Mesh(new THREE.TorusGeometry(0.11, 0.013, 8, 20, Math.PI), railMat);
+        arch2.rotation.z = Math.PI;
+        arch2.position.set(xPos, 1.5, 0);
+        mS.add(arch2);
+
+        const stem2 = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, 0.15, 8), railMat);
+        stem2.position.set(xPos, 1.61, 0);
+        mS.add(stem2);
+
+        /* cloth shape — trapezoid via lathe or just box with slight taper */
+        const gw = 0.3 + (i % 3) * 0.06;
+        const gh = 0.55 + (i % 2) * 0.18;
+        const gMesh2 = new THREE.Mesh(new THREE.BoxGeometry(gw, gh, 0.025 + Math.random() * 0.01), cM);
+        gMesh2.position.set(xPos, 1.5 - gh / 2 - 0.11, 0);
+        mS.add(gMesh2);
+      }
+
+      /* floor */
+      const mFloor = new THREE.Mesh(
+        new THREE.PlaneGeometry(14, 14),
+        new THREE.MeshPhysicalMaterial({ color: 0x080706, roughness: 0.08, metalness: 0.6 })
+      );
+      mFloor.rotation.x = -Math.PI / 2;
+      mFloor.position.y = -1.1;
+      mS.add(mFloor);
+
+      /* lights */
+      mS.add(new THREE.AmbientLight(0x0a0806, 1));
+      const mGlow = new THREE.PointLight(0xff9944, 3.5, 5);
+      mGlow.position.set(0, 2.5, 1);
+      mS.add(mGlow);
+      const mRim = new THREE.DirectionalLight(0x7799cc, 0.2);
+      mRim.position.set(-3, 4, -3);
+      mS.add(mRim);
+
+      let mt = 0;
+      function miniAnimate() {
+        requestAnimationFrame(miniAnimate);
+        mt += 0.008;
+        mGlow.intensity = 3.2 + Math.sin(mt * 1.2) * 0.5;
+        /* gentle camera sway */
+        mC.position.x = Math.sin(mt * 0.3) * 0.4;
+        mC.lookAt(0, 0.3, 0);
+        mR.render(mS, mC);
+      }
+      miniAnimate();
+
+      const resizeObs = new ResizeObserver(() => {
+        mC.aspect = section.clientWidth / section.clientHeight;
+        mC.updateProjectionMatrix();
+        mR.setSize(section.clientWidth, section.clientHeight);
+      });
+      resizeObs.observe(section);
+
+    })();
   </script>
 </body>
+
 </html>
